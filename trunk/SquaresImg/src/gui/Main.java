@@ -29,7 +29,7 @@ import javax.swing.UnsupportedLookAndFeelException;
  */
 public class Main {
     
-    static Frame frame;
+    static MainFrame frame;
     
     public Main() {
     }
@@ -50,7 +50,7 @@ public class Main {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                frame = new Frame();
+                frame = new MainFrame();
                 Start start = new Start(main);
                 /** Lecture de la taille de l'écran */
                 java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();

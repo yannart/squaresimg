@@ -21,20 +21,20 @@
 
 package gui;
 
-import calc.GeneraImagen;
+import calc.GenerateImage;
 import java.awt.image.BufferedImage;
 
 /**
  *
  * @author  Yann Arthur Nicolas
  */
-public class GeneracionProgreso extends javax.swing.JDialog implements Runnable{
+public class GeneratingProgress extends javax.swing.JDialog implements Runnable{
     
     private Thread mythread;
-    private GeneraImagen generaimagen;
-    private Frame parent;
+    private GenerateImage generaimagen;
+    private MainFrame parent;
     
-    public GeneracionProgreso(Frame parent, boolean modal, GeneraImagen generaimagen) {
+    public GeneratingProgress(MainFrame parent, boolean modal, GenerateImage generaimagen) {
         super(parent, modal);
         this.parent = parent;
         initComponents();
@@ -136,7 +136,7 @@ public class GeneracionProgreso extends javax.swing.JDialog implements Runnable{
         }
     }
     
-    public void setGeneraimagen(GeneraImagen generaimagen) {
+    public void setGeneraimagen(GenerateImage generaimagen) {
         this.generaimagen = generaimagen;
     }
     

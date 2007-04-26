@@ -30,7 +30,7 @@ import javax.swing.JOptionPane;
  *
  * @author Yann Arthur Nicolas
  */
-public class GeneraImagen implements Runnable{
+public class GenerateImage implements Runnable{
     
     private BufferedImage imagenprincipal;
     private ArrayList <BufferedImage> imagenescuadros;
@@ -42,7 +42,7 @@ public class GeneraImagen implements Runnable{
     private Thread mythread;
     
     /** Creates a new instance of GaneraImagen */
-    public GeneraImagen(BufferedImage imagenprincipal, ArrayList <BufferedImage> imagenescuadros, int tipo_color, int tipo_reparticion, int parametros) {
+    public GenerateImage(BufferedImage imagenprincipal, ArrayList <BufferedImage> imagenescuadros, int tipo_color, int tipo_reparticion, int parametros) {
         this.imagenprincipal = imagenprincipal;
         this.imagenescuadros = imagenescuadros;
         this.tipo_color = tipo_color;
