@@ -21,7 +21,7 @@
 
 package gui;
 
-import calc.GeneraImagen;
+import calc.GenerateImage;
 import chooser.ImageFileChooser;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -33,10 +33,12 @@ import javax.swing.JOptionPane;
  *
  * @author  Yann Arthur Nicolas
  */
-public class Frame extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
     
-    /** Creates new form Frame */
-    public Frame() {
+    /**
+     * Creates new form MainFrame
+     */
+    public MainFrame() {
         initComponents();
         initMyComponents();
     }
@@ -482,12 +484,12 @@ public class Frame extends javax.swing.JFrame {
         else
             reparticion = 2; //regular
         
-        GeneraImagen generaimagen = new GeneraImagen(imagenprincipal, imagenescuadros, color, reparticion, parametros);
+        GenerateImage generaimagen = new GenerateImage(imagenprincipal, imagenescuadros, color, reparticion, parametros);
         
         int valido = generaimagen.isValid();
         
         if(valido == 0){
-            GeneracionProgreso progreso = new GeneracionProgreso(this, true, generaimagen);
+            GeneratingProgress progreso = new GeneratingProgress(this, true, generaimagen);
             progreso.pack();
             java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
             progreso.setLocation((screenSize.width-progreso.getWidth())/2,(screenSize.height-progreso.getHeight())/2);

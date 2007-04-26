@@ -21,7 +21,7 @@
 
 package chooser;
 
-import gui.Frame;
+import gui.MainFrame;
 import java.awt.image.BufferedImage;
 import javax.swing.JFileChooser;
 import javax.media.jai.*;
@@ -36,10 +36,10 @@ import javax.swing.filechooser.FileFilter;
  */
 public class ImageFileChooser extends JFileChooser{
     
-    private Frame frame;
+    private MainFrame frame;
     private boolean cuadros=false;
     
-    public ImageFileChooser(Frame frame) {
+    public ImageFileChooser(MainFrame frame) {
         super();
         this.frame = frame;
         this.setMultiSelectionEnabled(false);

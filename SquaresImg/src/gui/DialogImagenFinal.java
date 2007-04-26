@@ -33,7 +33,7 @@ public class DialogImagenFinal extends javax.swing.JDialog {
     private BufferedImage bi;
     private ImageFileSave filesave;
     
-    public DialogImagenFinal(Frame parent, boolean modal, BufferedImage bi) {
+    public DialogImagenFinal(MainFrame parent, boolean modal, BufferedImage bi) {
         super(parent, modal);
         initComponents();
         this.bi = bi;
